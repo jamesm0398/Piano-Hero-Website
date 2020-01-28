@@ -4,8 +4,216 @@
 <head>
 <title>Piano Hero</title>
 
+<script src="modernizr-custom.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/9b3f87c5d7.js" crossorigin="anonymous"></script>
+
+    <script>
+		function move(e) {
+			var mover = e.getAttribute("mover");
+			var moveto = e.getAttribute("moveto");
+			document.getElementById(mover).style.display = "block";
+			document.getElementById(moveto).style.display = "none";
+		}
+    </script>
+    
 
 </head>
 <body>
-    <h1>This is a test</h1>
+    <style>
+        body{background-image: url('assets/bg.jpg');
+}
+    </style>
+    <div id="page1">
+        <div class="mainpage">
+            <div class="heading animated fadeInDown delay-05s">
+                <h1>Piano Hero</h1>
+                <h2>The only piano learning program you'll ever need</h2>
+            </div>
+            <div class="links animated fadeInDown delay-1s">
+                <ul>
+                    <li class="tooltip fade" data-title="What is Piano Hero?"><a onclick="move(this)" mover="page2" moveto="page1"><i class="fas fa-info-circle fa-3x"></i></a></li>
+                    <li class="tooltip fade" data-title="Setup Guide"><a onclick="move(this)" mover="page3" moveto="page1"><i class="fas fa-wrench fa-3x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="movepage animated slideInUp delay-15s">
+			<h1><a onclick="move(this)" mover="page2" moveto="page1" id="arrdown"><i
+						class="fas fa-arrow-down fa-lg"></i></a></h1>
+		</div>
+
+
+    </div>
+
+    <div id="page2">
+        <div class="movepage animated slideInUp delay-05s">
+			<h1><a onclick="move(this)" mover="page3" moveto="page2" id="arrdown"><i
+						class="fas fa-arrow-down fa-lg idark"></i></a></h1>
+        </div>
+        
+        <div class="movepageUp animated slideInUp">
+			<h1><a onclick="move(this)" mover="page1" moveto="page2" id="arrup"><i
+						class="fas fa-arrow-up fa-lg"></i></a></h1>
+		</div>
+
+        <div class="infopage">
+            <div class="heading animated fadeInDown delay-05s">
+                <h1>What is Piano Hero?</h1>
+                <h2>Piano Hero is a system that allows user to learn the piano by using their own keyboard, and a strip of LED lights that blink in sequence according to what notes should be played for a particular song. Users can choose a wav file and have it converted to a MIDI file using our online service.
+                </h2>
+            </div>
+        </div>
+
+        <div class="infoComponents">
+            <div class="heading animated fadeInDown delay-05s">
+                <h1>Components</h1>
+
+            </div>
+            <div class="components">
+                <div class="card animated flipInX">
+                    <div class="card-content">
+                        <div style="float: left;">
+                            <p>WAV to MIDI File Converter</p>
+                            
+                        </div>
+                        <span class="tooltip fade" data-title="Will be placed on top of the user's piano keyboard">will be placed on top of the user's piano keyboard</span>
+                        <div style="clear:both;"></div>
+                    </div>
+                        <picture>
+                            <source srcset="assets/convert.jpg" type="image/jpg">
+                            <img src="assets/convert.jpg" type="image/jpg">
+                        </picture>
+
+                </div>
+
+                <div class="card animated flipInX delay-05s">
+                    <div class="card-content">
+                        <div style="float: left;">
+                            <p>Microcontroller</p>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                        <picture>
+                            <source srcset="assets/micro.jpg" type="image/jpg">
+                            <img src="assets/micro.jpg" type="image/jpg">
+                        </picture>
+
+                </div>
+
+                <div class="card animated flipInX delay-075s">
+                    <div class="card-content">
+                        <div style="float: left;">
+                            <p>LED Strip</p>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                        <picture>
+                            <source srcset="assets/led.jpg" type="image/jpg">
+                            <img src="assets/led.jpg" type="image/jpg">
+                        </picture>
+
+                </div>
+                
+                <div class="card animated flipInX delay-075s">
+                    <div class="card-content" data-title="">
+                        <div style="float: left;">
+                            <p>Desktop Application</p>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                        <picture>
+                            <source srcset="assets/led.jpg" type="image/jpg">
+                            <img src="assets/led.jpg" type="image/jpg">
+                        </picture>
+
+                </div>
+              </div>
+            </div>
+            <div class="infoFeatures">
+
+                <div class="heading animated fadeInDown delay-05s">
+                    <h1>Features Include:</h1>
+                    <table>
+                        <tr>
+                            <td><i class="fas fa-clone fa-3x"></i></td>
+                            
+                           
+                        </tr>
+                        <tr>
+                            <td><p>Ability to select a WAV file and convert it to a MIDI file using our cloud service</p></td>
+                            
+                           
+                        </tr>
+
+                        <tr>
+                            <td><i class="fas fa-download fa-3x"></i></td>
+                        </tr>
+
+                        <tr>
+                            <td><p>Wirelessly download MIDI file to the microcontroller</p></td>
+                        </tr>
+
+                        <tr>
+                            <td><i class="fas fa-tachometer-alt fa-3x"></i></td>
+                        </tr>
+
+                        <tr>
+                            <td><p>Select a speed at which to play the song from the desktop app</p></td>
+                        </tr>
+
+                    </table>
+                </div>
+    
+            </div>
+
+          </div>
+     </div>
+
+    <div id="page3">
+
+        <div class="movepage animated slideInUp delay-05s">
+			<h1><a onclick="move(this)" mover="page4" moveto="page3" id="arrdown"><i
+						class="fas fa-arrow-down fa-lg idark"></i></a></h1>
+        </div>
+        
+        <div class="movepageUp animated slideInUp">
+			<h1><a onclick="move(this)" mover="page2" moveto="page3" id="arrup"><i
+						class="fas fa-arrow-up fa-lg"></i></a></h1>
+		</div>
+
+
+        <div class="setupPage">
+            <div class="heading animated fadeInDown delay-05s">
+                <h1>Setup Guide</h1>
+                
+            </div>
+
+            <div class="infoComponents">
+                <div class="guideCard animated flipInX delay-05s">
+                
+                    <picture>
+                        <source srcset="assets/diagram.jpg" type="image/jpg">
+                        <img src="assets/diagram.jpg" type="image/jpg">
+                    </picture>
+
+                </div>
+            </div>
+
+            <div class="heading animated fadeInDown delay-05s">
+                <p>1. Ensure you have the latest version of the Piano Hero Desktop App installed</p>
+                <p>2. Connect microcontroller to the same network as your pc</p>
+                <p>3. Place LED strip in precisely marked position on your keyboard</p>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+
+   
+
 </body>
