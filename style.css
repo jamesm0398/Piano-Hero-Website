@@ -207,6 +207,10 @@ html {
     text-align: center;
 }
 
+.left{
+    text-align: left;
+}
+
 .heading h1 {
     font-size: 2.5rem;
     font-weight: 500;
@@ -375,7 +379,7 @@ a:hover {
     background-color: rgb(20,4,245);
     border-radius: 50%;
     display: inline-block;
-    padding-bottom: 50%;
+    
   }
 
 
